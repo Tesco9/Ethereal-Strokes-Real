@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Music</title>
+</head>
+
+<body>
+
+    <!-- Background music (FIXED PATH) -->
+    <audio id="background-music" autoplay loop muted>
+        <source src="audio/symphony5.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        const audio = document.getElementById("background-music");
+
+        // Volume control
+        audio.volume = 0.3;
+
+        // Restore saved state
+        const isMuted = sessionStorage.getItem("audioMuted") === "true";
+        const currentTime = parseFloat(sessionStorage.getItem("audioCurrentTime")) || 0;
+
+        audio.muted = isMuted;
+        audio.currentTime = currentTime;
+
+        // Communication with parent pages
+        window.addEventListener("message", (event) => {
+            if (event.data === "unmute") {
+                audio.muted = false;
+                audio.play().catch((error) => console.log("Playback failed:", error));
+                sessionStorage.setItem("audioMuted", "false");
+
+            } else if (event.data === "mute") {
+                audio.muted = true;
+                sessionStorage.setItem("audioMuted", "true");
+            }
+        });
+
+        // Save playback time every second
+        setInterval(() => {
+            sessionStorage.setItem("audioCurrentTime", audio.currentTime);
+        }, 1000);
+    </script>
+
+</body>
+</html>

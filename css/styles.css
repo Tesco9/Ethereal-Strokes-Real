@@ -1,0 +1,310 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+/* Base Reset & Body */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Setting base styles for the entire document */
+body {
+    background-color: #fafaf8;
+    color: #333; 
+    font-family: 'Playfair Display', serif; 
+    line-height: 1.6; 
+    overflow-x: hidden; /* Prevents horizontal scrollbar if needed */
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 2rem 1rem;
+    border-bottom: 2px solid #ddd; 
+    background-color: #fbfbf6; /* Slight variation for distinction */
+}
+
+/* Header title styles */
+header h1 {
+    font-size: 2.8rem;
+    margin: 0;
+    color: #222; /* Slightly darker heading text */
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Header subtitle styles */
+header p {
+    margin-top: 0.5rem;
+    color: #666; /* Softer secondary text colour */
+    font-size: 1.1rem;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #fbfbf6;
+    padding: 0.5rem 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Navigation menu list styles */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation link styles */
+nav a {
+    color: #444; /* Dark grey for menu links */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/* Navigation hover effect */
+nav a:hover {
+    color: #666;
+    text-decoration: underline;
+}
+
+/* Main Content */
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+/* Sections */
+section {
+    margin-bottom: 2rem; /* Spacing between sections */
+}
+
+/* Section headings */
+section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: #222;
+    letter-spacing: 1px;
+}
+
+/* Section content */
+section p, 
+section dl, 
+section ul, 
+section blockquote {
+    margin-bottom: 1.5rem;
+    color: #444; /* Makes the colour the same as previous */
+    font-size: 1rem;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd; /* Soft border */
+    border-radius: 5px; 
+    margin-bottom: 1rem;
+}
+
+/* Blockquotes */
+blockquote {
+    font-style: italic;
+    margin-left: 2rem;
+    color: #555;
+    border-left: 3px solid #ccc;
+    padding-left: 1rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    color: #666;
+    background-color: #fbfbf6;
+    border-top: 2px solid #ddd;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Contact Page */
+#contact-intro h2,
+#contact-form-section h2,
+#privacy-note h2 {
+    margin-top: 2rem;
+    font-size: 1.8rem;
+    color: #222;
+    letter-spacing: 1px;
+}
+
+#contact-form-section {
+    margin-top: 2rem;
+}
+
+#contact-form {
+    max-width: 600px; /* Keeps the FORM centred */
+    margin: 0 auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 0.4rem;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    padding: 0.6rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fafaf8;
+    color: #444;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #bbb;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.7rem 1.2rem;
+    background-color: #ccc;
+    color: #333;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: #bbb;
+    color: #222;
+}
+
+/* Privacy Note */
+#privacy-note {
+    margin-top: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.4;
+    border-top: 1px solid #ddd;
+    padding-top: 1rem;
+}
+
+/* Audio Box */
+.audio-box {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: "Georgia", serif;
+    font-size: 14px;
+    color: #333;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0.8;
+}
+
+.audio-box:hover {
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.audio-box p {
+    margin: 0 0 5px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.audio-box button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 12px;
+    font-family: "Georgia", serif;
+}
+
+.audio-box button:hover {
+    background-color: #45a049;
+}
+
+/* Fade Effects */
+body {
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+body.fade-in {
+    opacity: 1;
+}
+
+body.fade-out {
+    opacity: 0;
+}
+
+/* Credits */
+#credits {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+}
+
+#credits h3 {
+    font-size: 16px;
+    color: #222;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+#credits ul {
+    list-style: none;
+    padding: 0;
+}
+
+#credits li {
+    margin: 10px 0;
+}
+
+#credits a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#credits a:hover {
+    text-decoration: underline;
+    color: #45a049;
+}
